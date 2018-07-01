@@ -1,0 +1,6 @@
+*.dll
+*.depend
+*.layout
+bin/
+obj/
+Not_to_be_added/
