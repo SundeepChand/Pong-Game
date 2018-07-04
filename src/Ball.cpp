@@ -31,11 +31,12 @@ void Ball::update()
     image.setPosition(currentPos);
 }
 
-void Ball::bounce(Paddle player1, Paddle player2)
+void Ball::bounce(Paddle player1, Paddle player2, sf::Sound &blif)
 {
     //Wall collisions.
     if(currentPos.x-radius < 0 || currentPos.x+radius > SCREEN_WIDTH)
     {
+        blif.play();
         dx = -dx;
     }
     //Collision with paddle
@@ -43,6 +44,7 @@ void Ball::bounce(Paddle player1, Paddle player2)
     {
         if(this->image.getPosition().x >= player1.image.getPosition().x - player1.image.getSize().x/2 && this->image.getPosition().x <= player1.image.getPosition().x + player1.image.getSize().x/2)
         {
+            blif.play();
             dy = -dy;
         }
     }
@@ -50,6 +52,7 @@ void Ball::bounce(Paddle player1, Paddle player2)
     {
         if(this->image.getPosition().x >= player2.image.getPosition().x - player2.image.getSize().x/2 && this->image.getPosition().x <= player2.image.getPosition().x + player2.image.getSize().x/2)
         {
+            blif.play();
             dy = -dy;
         }
     }

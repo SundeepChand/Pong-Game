@@ -13,6 +13,10 @@ Game::Game()
     bg.loadFromFile("Textures/bg.png");
     playerTexture.loadFromFile("Textures/sprites.png");
 
+    //Load the sounds.
+    buffer.loadFromFile("Sounds/blif.wav");
+    blif.setBuffer(buffer);
+
     //Create the window.
     window.create(sf::VideoMode(SCREEN_WIDTH, SCREEN_HEIGHT), "Pong", sf::Style::Close);
 
@@ -131,7 +135,7 @@ void Game::runLogic()
         player1.update();
         player2.update();
         ball.update();
-        ball.bounce(player1, player2);
+        ball.bounce(player1, player2, blif);
         gameOver = ball.checkColloision();
         if(gameOver)
         {

@@ -1,6 +1,7 @@
 #ifndef BALL_H
 #define BALL_H
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <Paddle.h>
 
 class Ball
@@ -9,7 +10,7 @@ class Ball
         Ball();
         Ball(sf::Texture* texture, sf::Vector2f initPos, sf::IntRect textureRect);
         void update();
-        void bounce(Paddle player1, Paddle player2);
+        void bounce(Paddle player1, Paddle player2, sf::Sound &blif);
         bool checkColloision();
         void addScore(int &score1, int &score2);
         ~Ball();

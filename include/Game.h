@@ -1,6 +1,7 @@
 #ifndef GAME_H
 #define GAME_H
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <Paddle.h>
 #include <Ball.h>
 
@@ -33,6 +34,10 @@ class Game
         //Variables for scores.
         int player1_score, player2_score;
         sf::Text player1_scoreText, player2_scoreText;
+
+        //Objects for sound.
+        sf::SoundBuffer buffer;
+        sf::Sound blif;
 };
 
 #endif // GAME_H

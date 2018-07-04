@@ -46,10 +46,10 @@
 			<Add option="-Wall" />
 			<Add option="-std=c++14" />
 			<Add option="-fexceptions" />
-			<Add directory="E:/Program_files/SFML-2.5.0-windows-gcc-5.1.0-tdm-32-bit/SFML-2.5.0/include" />
+			<Add directory="F:/Codeblocks/MinGW/SFML-2.5.0/include" />
 		</Compiler>
 		<Linker>
-			<Add directory="E:/Program_files/SFML-2.5.0-windows-gcc-5.1.0-tdm-32-bit/SFML-2.5.0/lib" />
+			<Add directory="F:/Codeblocks/MinGW/SFML-2.5.0/lib" />
 		</Linker>
 		<Unit filename="include/Ball.h" />
 		<Unit filename="include/Constants.h" />
