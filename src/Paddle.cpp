@@ -14,7 +14,7 @@ Paddle::Paddle(sf::Texture* texture, sf::Vector2f initPos, sf::IntRect textureRe
     dimensions.y = float(PADDLE_HEIGHT);
     currentPos = initPos;
     dx = 0;
-    paddleSpeed = 0.2;
+    paddleSpeed = PADDLE_SPEED;
 
     //Set the player image.
     image.setSize(dimensions);

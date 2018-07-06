@@ -10,11 +10,11 @@ Game::Game()
     gameOver = false;
 
     //Load the textures.
-    bg.loadFromFile("Textures/bg.png");
-    playerTexture.loadFromFile("Textures/sprites.png");
+    bg.loadFromFile("Assets/Textures/bg.png");
+    playerTexture.loadFromFile("Assets/Textures/sprites.png");
 
     //Load the sounds.
-    buffer.loadFromFile("Sounds/blif.wav");
+    buffer.loadFromFile("Assets/Sounds/blif.wav");
     blif.setBuffer(buffer);
 
     //Create the window.
@@ -28,8 +28,8 @@ Game::Game()
     bgRect.setTexture(&bg);
 
     //Load the fonts.
-    blackcha.loadFromFile("Fonts/blackcha.ttf");
-    chlorine.loadFromFile("Fonts/chlorine.ttf");
+    blackcha.loadFromFile("Assets/Fonts/blackcha.ttf");
+    chlorine.loadFromFile("Assets/Fonts/chlorine.ttf");
 
     //Set the texts.
     titleText = sf::Text("PONG", chlorine, 80);

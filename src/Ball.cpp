@@ -12,9 +12,9 @@ Ball::Ball(sf::Texture* texture, sf::Vector2f initPos, sf::IntRect textureRect)
     //Initialize the values.
     currentPos = initPos;
     radius = BALL_RADIUS;
-    //Set dx to a random value.
-    dx = 0.1;
-    dy = 0.15;
+    //Set ball speed.
+    dx = BALL_DX;
+    dy = BALL_DY;
 
     //Set the image properties.
     image.setOrigin(radius, radius);
