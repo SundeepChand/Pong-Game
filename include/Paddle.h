@@ -13,6 +13,7 @@ class Paddle
         void update();
         sf::Vector2f getDimensions();
         sf::Vector2f getCurrentPos();
+        float getSpeed();
         virtual ~Paddle();
 
     public:
@@ -21,6 +22,7 @@ class Paddle
     private:
         sf::Vector2f currentPos;
         float dx;
+        bool right;
         float paddleSpeed;
         sf::Vector2f dimensions;
 };

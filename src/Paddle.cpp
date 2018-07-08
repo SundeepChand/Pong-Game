@@ -26,6 +26,7 @@ Paddle::Paddle(sf::Texture* texture, sf::Vector2f initPos, sf::IntRect textureRe
 
 void Paddle::move(bool right)
 {
+    this->right = right;
     if(right)
     {
         if(image.getPosition().x +dimensions.x/2 < SCREEN_WIDTH)
@@ -77,6 +78,14 @@ sf::Vector2f Paddle::getDimensions()
 sf::Vector2f Paddle::getCurrentPos()
 {
     return currentPos;
+}
+
+float Paddle::getSpeed()
+{
+    if(right)
+        return paddleSpeed;
+    else
+        return -paddleSpeed;
 }
 
 Paddle::~Paddle()

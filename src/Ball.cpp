@@ -45,6 +45,8 @@ void Ball::bounce(Paddle player1, Paddle player2, sf::Sound &blif)
         if(this->image.getPosition().x >= player1.image.getPosition().x - player1.image.getSize().x/2 && this->image.getPosition().x <= player1.image.getPosition().x + player1.image.getSize().x/2)
         {
             blif.play();
+            float playerSpeed = player1.getSpeed();
+            dx += (playerSpeed - dx)*0.1;
             dy = -dy;
         }
     }
@@ -53,6 +55,8 @@ void Ball::bounce(Paddle player1, Paddle player2, sf::Sound &blif)
         if(this->image.getPosition().x >= player2.image.getPosition().x - player2.image.getSize().x/2 && this->image.getPosition().x <= player2.image.getPosition().x + player2.image.getSize().x/2)
         {
             blif.play();
+            float playerSpeed = player2.getSpeed();
+            dx += (playerSpeed - dx)*0.1;
             dy = -dy;
         }
     }
