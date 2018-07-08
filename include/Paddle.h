@@ -1,7 +1,6 @@
 #ifndef PADDLE_H
 #define PADDLE_H
 #include <SFML/Graphics.hpp>
-#include <Score.h>
 
 class Paddle
 {

@@ -1,7 +1,6 @@
 #include "Paddle.h"
 #include <SFML/Graphics.hpp>
 #include <Constants.h>
-#include <Score.h>
 
 Paddle::Paddle()
 {

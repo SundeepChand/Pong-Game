@@ -46,7 +46,7 @@ void Ball::bounce(Paddle player1, Paddle player2, sf::Sound &blif)
         {
             blif.play();
             float playerSpeed = player1.getSpeed();
-            dx += (playerSpeed - dx)*0.1;
+            dx += (playerSpeed - dx)*0.17;
             dy = -dy;
         }
     }
@@ -56,7 +56,7 @@ void Ball::bounce(Paddle player1, Paddle player2, sf::Sound &blif)
         {
             blif.play();
             float playerSpeed = player2.getSpeed();
-            dx += (playerSpeed - dx)*0.1;
+            dx += (playerSpeed - dx)*0.17;
             dy = -dy;
         }
     }
