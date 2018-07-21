@@ -1,6 +1,9 @@
 #include "Ball.h"
 #include <Constants.h>
 #include <Paddle.h>
+#include <ctime>
+#include <iostream>
+
 
 Ball::Ball()
 {
@@ -13,8 +16,15 @@ Ball::Ball(sf::Texture* texture, sf::Vector2f initPos, sf::IntRect textureRect)
     currentPos = initPos;
     radius = BALL_RADIUS;
     //Set ball speed.
-    dx = BALL_DX;
-    dy = BALL_DY;
+    srand(time(NULL));
+    dx = float((rand()%11+5))/100.0f;
+    dx = int(dx*100)%2==0 ? dx: -dx;
+
+    srand(time(NULL));
+    dy = float((rand()%10+10))/100.0f;
+    dy = int(dy*100)%2==0 ? dy: -dy;
+
+    std::cout<<"dx: "<<dx<<"\tdy: "<<dy<<std::endl;
 
     //Set the image properties.
     image.setOrigin(radius, radius);

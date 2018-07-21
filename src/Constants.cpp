@@ -5,9 +5,5 @@ int SCREEN_HEIGHT = 512;
 int BALL_RADIUS = 15;
 int PADDLE_HEIGHT = 20;
 
-//Variables for speed of the ball.
-float BALL_DX = 0.1;
-float BALL_DY = 0.15;
-
 //Variables for speed of the paddle.
 float PADDLE_SPEED = 0.2;
